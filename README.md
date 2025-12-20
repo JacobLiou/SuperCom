@@ -230,3 +230,13 @@ command>
 
 <img src="Image/image-20251220111508680.png" alt="image-20251220111508680" style="zoom:80%;" />
 
+概率性编译报错
+
+<img src="Image/image-20251220115539805.png" alt="image-20251220115539805" style="zoom:80%;" />
+
+
+
+
+
+
+

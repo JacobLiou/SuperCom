@@ -211,7 +211,7 @@ namespace SuperCom
                         border.Child = null;
                         oldTextEditor = null;
                         border.Child = newTextEditor;
-                        MessageCard.Warning($"{LangManager.GetValueByKey("MemLimitClearLog")}: {port.Name}");
+                        MessageCard.Warning($"{LangManager.GetValueByKey("MemLimitClearLog")}: {port.Name}", onConfirm: null, this);
                     }
                 }
             });
