@@ -42,6 +42,7 @@ namespace SuperCom.ViewModel
         public AdvancedSend CurrentAdvancedSend { get; set; }
 
         public Action<List<PortTabItem>> OnBaudRatesChanged { get; set; }
+        public List<string> Paritys { get; set; } = new List<string>() { "None", "Odd", "Even", "Mark", "Space" };
 
         private ObservableCollection<string> SendHistory { get; set; }
 
