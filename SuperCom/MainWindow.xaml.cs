@@ -208,6 +208,8 @@ namespace SuperCom
                         else
                             newTextEditor.TextChanged += port.TextBox_TextChanged;
                         port.TextEditor = newTextEditor;
+                        border.Child = null;
+                        oldTextEditor = null;
                         border.Child = newTextEditor;
                         MessageCard.Warning($"{LangManager.GetValueByKey("MemLimitClearLog")}: {port.Name}");
                     }
@@ -845,7 +847,6 @@ namespace SuperCom
 
         private void ClearDataByPortName(string portName)
         {
-            FindTextBoxByPortName(portName)?.Clear();
             PortTabItem portTabItem = vieModel.PortTabItems.FirstOrDefault(arg => arg.Name.Equals(portName));
             if (portTabItem != null) {
                 portTabItem.ClearData();
