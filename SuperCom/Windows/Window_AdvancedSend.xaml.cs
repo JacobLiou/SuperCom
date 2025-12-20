@@ -71,7 +71,7 @@ namespace SuperCom
         }
 
 
-        private void BaseWindow_ContentRendered(object sender, EventArgs e)
+        public void SetSelect()
         {
 
             if (Main != null && Main.vieModel != null && Main?.vieModel.HighlightingDefinitions?.Count > 0) {

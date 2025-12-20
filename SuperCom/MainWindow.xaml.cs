@@ -74,6 +74,7 @@ namespace SuperCom
         private Window_Monitor window_Monitor { get; set; }
         private Window_TelnetServer Window_TelnetServer { get; set; }
         private Window_VirtualPort virtualPort { get; set; }
+        private Window_AdvancedSend window_AdvancedSend { get; set; }
         public VieModel_Main vieModel { get; set; }
 
         /// <summary>
@@ -1592,11 +1593,15 @@ namespace SuperCom
             if (button != null && button.Tag != null)
                 int.TryParse(button.Tag.ToString(), out index);
 
-            Window_AdvancedSend window = new Window_AdvancedSend();
-            window.SideSelectedIndex = index;
-            window.Show();
-            window.Focus();
-            window.BringIntoView();
+            if (window_AdvancedSend == null) {
+                window_AdvancedSend = new Window_AdvancedSend();
+            }
+            window_AdvancedSend.SideSelectedIndex = index;
+            window_AdvancedSend.Show();
+            window_AdvancedSend.Focus();
+            window_AdvancedSend.BringIntoView();
+            window_AdvancedSend.Activate();
+            window_AdvancedSend.SetSelect();
             Logger.Info("open send window");
 
         }
