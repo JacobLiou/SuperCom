@@ -1593,9 +1593,8 @@ namespace SuperCom
             if (button != null && button.Tag != null)
                 int.TryParse(button.Tag.ToString(), out index);
 
-            if (window_AdvancedSend == null) {
-                window_AdvancedSend = new Window_AdvancedSend();
-            }
+            window_AdvancedSend?.Close();
+            window_AdvancedSend = new Window_AdvancedSend();
             window_AdvancedSend.SideSelectedIndex = index;
             window_AdvancedSend.Show();
             window_AdvancedSend.Focus();
