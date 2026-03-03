@@ -1,4 +1,5 @@
 ﻿
+
 using ICSharpCode.AvalonEdit;
 using ITLDG.DataCheck;
 using Newtonsoft.Json.Linq;
@@ -372,7 +373,7 @@ namespace SuperCom.Entity
                 dataCheck.Enabled &&
                 DataCheckPlugins.Count > 0 &&
                 dataCheck.SelectedIndex is int index &&
-                index >= 0 && index < DataCheckPlugins.Count - 1) {
+                index >= 0 && index < DataCheckPlugins.Count) {
                 Plugin plugin = DataCheckPlugins[index];
 
                 int len = bytes.Length;

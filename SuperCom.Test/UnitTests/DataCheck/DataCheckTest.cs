@@ -274,7 +274,7 @@ namespace SuperCom.Test.UnitTests.DataCheck
                 portTabItem.SerialPort.DataCheck = dataCheck;
                 string str =
                     TransformHelper.FormatHexString(TransformHelper.ByteArrayToHexString(portTabItem.CalcHexValue(input)), "", " ");
-                Assert.AreEqual(str, resultArr[i]);
+                Assert.AreEqual(resultArr[i], str);
             }
 
         }
